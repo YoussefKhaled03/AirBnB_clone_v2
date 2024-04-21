@@ -32,6 +32,7 @@ def c_route(text):
     """
     return "C {}".format(text.replace("_", " "))
 
+
 @app.route('/python/', defaults={"text": "is cool"}, strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_route(text):
@@ -47,6 +48,7 @@ def number_route(n):
     Displays 'n is a number' only if n is an integer
     """
     return "{} is a number".format(n)
+
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def number_template(n):
